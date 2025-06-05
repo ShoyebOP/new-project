@@ -1,0 +1,99 @@
+.map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.map-area {
+    position: relative;
+    width: 800px; /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide anything outside the map area */
+}
+
+.map-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without distorting aspect ratio */
+}
+
+#volunteerMarkers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to markers */
+}
+
+.volunteer-marker {
+    position: absolute;
+    width: 30px; /* Size of the marker */
+    height: 30px; /* Size of the marker */
+    background-color: #007bff; /* Blue color for markers */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    cursor: grab; /* Indicate draggable */
+    pointer-events: auto; /* Allow clicking/dragging on the marker */
+    transform: translate(-50%, -50%); /* Center the marker on the exact click/drop location */
+}
+
+.volunteer-marker.dragging {
+    cursor: grabbing;
+    opacity: 0.7;
+}
+
+.controls-panel {
+    display: flex;
+    justify-content: space-around;
+    width: 800px; /* Match map area width */
+}
+
+.layers-control, .volunteers-list-control {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Adjust as needed */
+}
+
+.layers-control h3, .volunteers-list-control h3 {
+    margin-top: 0;
+}
+
+#layersList, #volunteersList {
+    list-style: none;
+    padding: 0;
+    max-height: 150px; /* Limit list height */
+    overflow-y: auto; /* Add scroll if list is long */
+    margin-bottom: 10px;
+}
+
+#layersList li, #volunteersList li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+#layersList li:last-child, #volunteersList li:last-child {
+    border-bottom: none;
+}
+
+#volunteersList li {
+    cursor: grab; /* Indicate draggable */
+}
+
+#volunteersList li.dragging {
+    cursor: grabbing;
+}
+
+.hidden {
+    display: none;
+}

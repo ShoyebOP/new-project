@@ -1,0 +1,10 @@
+{
+  "users": {
+    "admin": "adminpass",
+    "volunteers": "volunteerpass",
+    "mod": "modpass"
+  },
+  "volunteers": [],
+  "mapLayers": [],
+  "placedMarkers": []
+}

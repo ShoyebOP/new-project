@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <div class="map-container">
+        <h2>Volunteer Map</h2>
+        <div class="map-area" id="mapArea">
+            <!-- Map image will be loaded here -->
+            <img id="mapImage" src="" alt="Map">
+            <div id="volunteerMarkers">
+                <!-- Volunteer markers will be placed here -->
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <div class="layers-control">
+                <h3>Layers (Admin Only)</h3>
+                <ul id="layersList">
+                    <!-- Layers will be listed here -->
+                </ul>
+                <input type="text" id="newLayerName" placeholder="New Layer Name">
+                <button id="addLayerBtn">Add Layer</button>
+            </div>
+
+            <div class="volunteers-list-control">
+                <h3>Volunteers</h3>
+                <button id="toggleVolunteersList">Show Volunteers</button>
+                <ul id="volunteersList" class="hidden">
+                    <!-- Draggable volunteer names will be listed here -->
+                </ul>
+            </div>
+        </div>
+        <p><a href="volunteers.html">Back to Volunteers List</a></p>
+    </div>
+
+    <script src="map.js"></script>
+</body>
+</html>

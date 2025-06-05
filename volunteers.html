@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteers List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="volunteers-container">
+        <h2>Volunteers List</h2>
+        <table class="excel-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                    <th>Roll</th>
+                    <th>Mobile No.</th>
+                </tr>
+            </thead>
+            <tbody id="volunteersTableBody">
+                <!-- Volunteer data will be loaded here -->
+            </tbody>
+        </table>
+
+        <div class="admin-controls" id="adminControls">
+            <h3>Add New Volunteer</h3>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="class" placeholder="Class">
+            <input type="text" id="section" placeholder="Section">
+            <input type="text" id="roll" placeholder="Roll">
+            <input type="text" id="mobile" placeholder="Mobile No.">
+            <button id="addVolunteerBtn">Add Volunteer</button>
+            <p><a href="map.html">View Volunteer Map</a></p>
+        </div>
+
+        <p><a href="change-password.html" id="changePasswordLink">Change Account Passwords</a></p>
+    </div>
+
+    <script src="volunteers.js"></script>
+</body>
+</html>
